@@ -1,1 +1,1 @@
-# How-To-Evaluate-DimsionalityReduction
+# How-To-Evaluate-DimensionalityReduction
