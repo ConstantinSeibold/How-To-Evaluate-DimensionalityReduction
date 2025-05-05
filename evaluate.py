@@ -27,10 +27,9 @@ class Evaluator:
         assert "methods" in self.config, f'No methods found in configuration'
         assert "metrics" in self.config, f'No metrics found in configuration'
 
-        # validation
-        # dataset validation ?
-        # for dataset in self.config['datasets']:
-        #     pass
+        # dataset validation
+        for dataset in self.config['datasets']:
+            assert hasattr(dataset, 'data'), f'{dataset} does not have a `data` attribute'
 
         for method in self.config['methods']:
             assert hasattr(method, 'fit_transform') and callable(method.fit_transform), \
