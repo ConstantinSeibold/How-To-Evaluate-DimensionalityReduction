@@ -1,11 +1,9 @@
-from abc import ABC
-from .base import Metric
+from ..base import Metric
 from sklearn.manifold import trustworthiness
 import numpy.typing as npt
-import numpy as np
 
 
-class Trustworthiness(Metric, ABC):
+class Trustworthiness(Metric):
     def __call__(
             self,
             X: npt.NDArray[float],
@@ -23,4 +21,8 @@ class Trustworthiness(Metric, ABC):
         )
 
     def __repr__(self):
+        return self.__str__()
+
+    def __str__(self):
         return 'Trustworthiness'
+

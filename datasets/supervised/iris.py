@@ -1,4 +1,4 @@
-from .base import Dataset
+from ..base import Dataset
 from sklearn.datasets import load_iris
 
 

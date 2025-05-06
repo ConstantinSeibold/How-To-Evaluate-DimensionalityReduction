@@ -1,5 +1,5 @@
 from sklearn.manifold import MDS
-from .base import Method
+from ..base import Method
 
 
 class MDS(MDS, Method):
@@ -28,5 +28,8 @@ class MDS(MDS, Method):
             normalized_stress=normalized_stress,
         )
 
-    def __repr__(self):
+    def __str__(self):
         return f'MDS(n_components={self.n_components})'
+
+    def __repr__(self):
+        return self.__str__()

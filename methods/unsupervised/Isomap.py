@@ -1,5 +1,5 @@
 from sklearn.manifold import Isomap
-from .base import Method
+from ..base import Method
 
 
 class Isomap(Isomap, Method):
@@ -32,5 +32,8 @@ class Isomap(Isomap, Method):
             metric_params=metric_params,
         )
 
-    def __repr__(self):
+    def __str__(self):
         return f'Isomap(n_components={self.n_components})'
+
+    def __repr__(self):
+        return self.__str__()
